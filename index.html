@@ -1,11 +1,12 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Morphing Mobile Hamburger Navigation Demo</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
     <style>
         * {
             -webkit-box-sizing: border-box;
@@ -17,7 +18,8 @@
             padding: 0;
             margin: 0;
             font-family: 'Roboto';
-            line-height: 1.4em;
+            line-height: 1.5em;
+            font-size: 17px;
             color: #333;
         }
         
@@ -31,7 +33,7 @@
             right: 0;
             left: 0;
             color: white;
-            background: linear-gradient(45deg, rgb(97, 123, 156) 10%, rgb(29, 72, 107));
+            background: linear-gradient(45deg, rgb(97, 123, 156) 10%, rgb(19, 51, 77));
             font-size: 24px;
             padding: 0;
             transition: 1s;
@@ -41,9 +43,9 @@
         .menu-bar .ham {
             display: block;
             width: 23px;
-            height: 1px;
+            height: 2px;
             position: absolute;
-            background: #00b19e;
+            background: rgb(130, 144, 165);
             white-space: nowrap;
             -webkit-transition: all ease .3s;
             transition: all ease .3s;
@@ -60,12 +62,12 @@
             content: '';
             display: inline-block;
             width: 23px;
-            height: 1px;
+            height: 2px;
             -webkit-transition: all ease .3s;
             transition: all ease .3s;
             outline: 1px solid transparent;
             left: 0;
-            background: #00b19e;
+            background: rgb(130, 144, 165);
         }
         
         .menu-bar .ham:before {
@@ -98,7 +100,7 @@
             transition: all .3s;
             width: 100vw;
             margin-top: -100vh;
-            padding-right: 40px;
+            padding-right: 50px;
             opacity: 0;
             overflow: auto;
         }
@@ -128,20 +130,30 @@
             margin: 5px 0 0 0;
         }
         
-        .menu-bar input[type=checkbox]+div .menu ul ul {
+        .menu-bar .menu ul>li {
+            border-top: solid 1px rgba(255, 255, 255, .2);
+        }
+        
+        .menu-bar .menu ul>li:first-child {
+            border-top: none;
+        }
+        
+        .menu-bar .menu ul ul {
             margin-left: 20px;
         }
         
         .menu-bar input[type=checkbox]+div .menu ul li a {
             display: block;
             color: #fff;
-            font-size: 15px;
+            font-size: 13px;
             text-decoration: none;
             padding: 9px 15px;
             line-height: 1em;
             text-align: left;
+            text-transform: uppercase;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.0.0.slim.min.js" integrity="sha256-Rf4BadfyCtsvHmO89BUZcbYvNNvZvOT08ALfEzvCsD0=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -192,18 +204,27 @@
         </div>
     </label>
     <div class="page">
-        Appropriately morph proactive niche markets with resource maximizing functionalities. Uniquely drive excellent models rather than process-centric catalysts for change. Distinctively expedite impactful niche markets via value-added niche markets. Synergistically
-        fashion optimal potentialities for low-risk high-yield systems. Globally pursue excellent networks rather than empowered products. Synergistically unleash installed base potentialities for ethical experiences. Phosfluorescently implement interdependent
-        value rather than inexpensive value. Assertively implement B2C ROI and highly efficient methods of empowerment. Phosfluorescently incentivize synergistic relationships whereas synergistic functionalities. Rapidiously underwhelm cross functional
-        infomediaries for stand-alone methods of empowerment. Seamlessly envisioneer tactical relationships rather than client-based metrics. Conveniently matrix strategic "outside the box" thinking without an expanded array of testing procedures. Energistically
-        coordinate e-business opportunities without granular schemas. Quickly negotiate seamless mindshare with alternative initiatives. Objectively formulate progressive "outside the box" thinking and tactical collaboration and idea-sharing. Holisticly
-        reintermediate mission-critical networks after leading-edge paradigms. Professionally incentivize vertical processes and professional e-markets. Dramatically formulate turnkey alignments after optimal collaboration and idea-sharing. Distinctively
-        embrace viral infomediaries via customer directed methodologies. Phosfluorescently foster tactical innovation with intermandated ideas. Globally conceptualize bricks-and-clicks outsourcing via worldwide sources. Intrinsicly brand strategic imperatives
-        with covalent resources. Quickly administrate distinctive leadership skills and process-centric applications. Holisticly revolutionize vertical quality vectors through wireless users. Appropriately empower client-focused content and error-free
-        collaboration and idea-sharing. Enthusiastically brand leveraged paradigms and robust materials. Continually engineer client-focused best practices rather than plug-and-play users. Phosfluorescently formulate professional web-readiness rather
-        than out-of-the-box markets. Authoritatively negotiate viral resources via prospective total linkage. Progressively syndicate standardized e-commerce vis-a-vis progressive functionalities. Energistically engineer distributed technologies after
-        wireless experiences. Interactively actualize future-proof methods of empowerment without leveraged products. Distinctively morph inexpensive bandwidth after extensible paradigms. Conveniently monetize high-payoff methods of empowerment rather
-        than enabled interfaces. Authoritatively architect reliable communities for corporate value. Interactively engineer principle-centered convergence after process-centric interfaces. Holisticly promote enterprise interfaces vis-a-vis accurate resources.
+        Dramatically simplify standards compliant functionalities via team driven leadership skills. Rapidiously engage leading-edge web services for backward-compatible schemas. Energistically network error-free users for technically sound niches. Interactively fabricate client-centered total linkage rather than backward-compatible models. Enthusiastically evolve process-centric meta-services vis-a-vis cross functional catalysts for change.
+
+Appropriately provide access to virtual manufactured products without client-based opportunities. Appropriately deploy e-business internal or "organic" sources through 2.0 data. Dynamically predominate frictionless synergy whereas strategic sources. Quickly enable next-generation expertise vis-a-vis user friendly niches. Continually predominate interactive action items after distinctive collaboration and idea-sharing.
+
+Energistically formulate virtual niches without interoperable applications. Enthusiastically integrate multifunctional processes whereas enterprise partnerships. Energistically parallel task cutting-edge deliverables via functional systems. Quickly maintain robust portals and excellent initiatives. Objectively negotiate strategic technologies without cost effective customer service.
+
+Completely pontificate leveraged users before holistic functionalities. Professionally synergize compelling paradigms before virtual e-tailers. Assertively pursue covalent e-commerce without e-business infomediaries. Completely generate one-to-one networks through ubiquitous portals. Seamlessly deploy state of the art quality vectors for leveraged benefits.
+
+Assertively unleash backward-compatible resources and exceptional mindshare. Globally brand interoperable technologies for an expanded array of scenarios. Dynamically cultivate progressive innovation vis-a-vis top-line scenarios. Dynamically envisioneer prospective strategic theme areas before best-of-breed portals. Globally procrastinate low-risk high-yield functionalities with diverse relationships.
+
+Compellingly disintermediate resource sucking channels for timely users. Globally orchestrate future-proof core competencies before multidisciplinary functionalities. Collaboratively target cost effective leadership skills via premium methods of empowerment. Seamlessly fabricate multifunctional bandwidth vis-a-vis stand-alone applications. Collaboratively pontificate covalent human capital without distinctive channels.
+
+Professionally harness go forward infrastructures vis-a-vis 24/7 "outside the box" thinking. Authoritatively incentivize diverse infrastructures before orthogonal web-readiness. Holisticly redefine real-time web-readiness whereas B2C bandwidth. Holisticly pontificate multidisciplinary web services rather than bleeding-edge scenarios. Phosfluorescently matrix extensive methodologies and multidisciplinary methodologies.
+
+Competently streamline open-source intellectual capital with error-free expertise. Distinctively envisioneer cross-unit portals vis-a-vis interoperable.
     </div>
+    <script>
+        $(function() {
+
+        });
+    </script>
 </body>
+
 </html>
