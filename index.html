@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Morphing Mobile Hamburger Navigation Demo</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto';
+            line-height: 1.4em;
+            color: #333;
+        }
+        
+        .page {
+            padding: 20px;
+        }
+        
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            color: white;
+            background: linear-gradient(45deg, rgb(97, 123, 156) 10%, rgb(29, 72, 107));
+            font-size: 24px;
+            padding: 0;
+            transition: 1s;
+            z-index: 999;
+        }
+        
+        .menu-bar .ham {
+            display: block;
+            width: 23px;
+            height: 1px;
+            position: absolute;
+            background: #00b19e;
+            white-space: nowrap;
+            -webkit-transition: all ease .3s;
+            transition: all ease .3s;
+            top: 22px;
+            right: 0;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            z-index: 999;
+        }
+        
+        .menu-bar .ham:after,
+        .menu-bar .ham:before {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            width: 23px;
+            height: 1px;
+            -webkit-transition: all ease .3s;
+            transition: all ease .3s;
+            outline: 1px solid transparent;
+            left: 0;
+            background: #00b19e;
+        }
+        
+        .menu-bar .ham:before {
+            top: -8px;
+        }
+        
+        .menu-bar .ham:after {
+            top: 8px;
+        }
+        
+        .menu-bar input[type=checkbox] {
+            position: absolute;
+            z-index: -1000;
+            left: -1000px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            padding: 0;
+            border: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .menu-bar input[type=checkbox]+div .menu {
+            display: block;
+            height: 100vh;
+            z-index: 9;
+            color: #fff;
+            transition: all .3s;
+            width: 100vw;
+            margin-top: -100vh;
+            padding-right: 40px;
+            opacity: 0;
+            overflow: auto;
+        }
+        
+        .menu-bar input[type=checkbox]:checked+div .ham {
+            background-color: transparent !important;
+        }
+        
+        .menu-bar input[type=checkbox]:checked+div .ham:before {
+            -webkit-transform: translateY(8px) rotateZ(-45deg);
+            transform: translateY(8px) rotateZ(-45deg);
+        }
+        
+        .menu-bar input[type=checkbox]:checked+div .ham:after {
+            -webkit-transform: translateY(-8px) rotateZ(45deg);
+            transform: translateY(-8px) rotateZ(45deg);
+        }
+        
+        .menu-bar input[type=checkbox]:checked+div .menu {
+            margin-top: 0;
+            opacity: 1;
+        }
+        
+        .menu-bar input[type=checkbox]+div .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 5px 0 0 0;
+        }
+        
+        .menu-bar input[type=checkbox]+div .menu ul ul {
+            margin-left: 20px;
+        }
+        
+        .menu-bar input[type=checkbox]+div .menu ul li a {
+            display: block;
+            color: #fff;
+            font-size: 15px;
+            text-decoration: none;
+            padding: 9px 15px;
+            line-height: 1em;
+            text-align: left;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.0.0.slim.min.js" integrity="sha256-Rf4BadfyCtsvHmO89BUZcbYvNNvZvOT08ALfEzvCsD0=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <label class="menu-bar">
+        <input type="checkbox">
+        <div>
+            <!-- <div class="button-menu"></div>
+            <div class="button-close"></div> -->
+            <span class="ham"></span>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                    <li>
+                        <a href="">Page</a>
+                    </li>
+                    <li>
+                        <a href="">Page</a>
+                    </li>
+                    <li>
+                        <a href="">Page</a>
+                    </li>
+                    <li>
+                        <a href="">Page</a>
+                    </li>
+                    <li>
+                        <a href="">Page</a>
+                    </li>
+                    <li>
+                        <a href="">Page</a>
+                    </li>
+                    <li>
+                        <a href="">Page</a>
+                    </li>
+                    <li>
+                        <a href="">Page</a>
+                    </li>
+                    <li>
+                        <a href="">Page</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </label>
+    <div class="page">
+        Appropriately morph proactive niche markets with resource maximizing functionalities. Uniquely drive excellent models rather than process-centric catalysts for change. Distinctively expedite impactful niche markets via value-added niche markets. Synergistically
+        fashion optimal potentialities for low-risk high-yield systems. Globally pursue excellent networks rather than empowered products. Synergistically unleash installed base potentialities for ethical experiences. Phosfluorescently implement interdependent
+        value rather than inexpensive value. Assertively implement B2C ROI and highly efficient methods of empowerment. Phosfluorescently incentivize synergistic relationships whereas synergistic functionalities. Rapidiously underwhelm cross functional
+        infomediaries for stand-alone methods of empowerment. Seamlessly envisioneer tactical relationships rather than client-based metrics. Conveniently matrix strategic "outside the box" thinking without an expanded array of testing procedures. Energistically
+        coordinate e-business opportunities without granular schemas. Quickly negotiate seamless mindshare with alternative initiatives. Objectively formulate progressive "outside the box" thinking and tactical collaboration and idea-sharing. Holisticly
+        reintermediate mission-critical networks after leading-edge paradigms. Professionally incentivize vertical processes and professional e-markets. Dramatically formulate turnkey alignments after optimal collaboration and idea-sharing. Distinctively
+        embrace viral infomediaries via customer directed methodologies. Phosfluorescently foster tactical innovation with intermandated ideas. Globally conceptualize bricks-and-clicks outsourcing via worldwide sources. Intrinsicly brand strategic imperatives
+        with covalent resources. Quickly administrate distinctive leadership skills and process-centric applications. Holisticly revolutionize vertical quality vectors through wireless users. Appropriately empower client-focused content and error-free
+        collaboration and idea-sharing. Enthusiastically brand leveraged paradigms and robust materials. Continually engineer client-focused best practices rather than plug-and-play users. Phosfluorescently formulate professional web-readiness rather
+        than out-of-the-box markets. Authoritatively negotiate viral resources via prospective total linkage. Progressively syndicate standardized e-commerce vis-a-vis progressive functionalities. Energistically engineer distributed technologies after
+        wireless experiences. Interactively actualize future-proof methods of empowerment without leveraged products. Distinctively morph inexpensive bandwidth after extensible paradigms. Conveniently monetize high-payoff methods of empowerment rather
+        than enabled interfaces. Authoritatively architect reliable communities for corporate value. Interactively engineer principle-centered convergence after process-centric interfaces. Holisticly promote enterprise interfaces vis-a-vis accurate resources.
+    </div>
+    <script>
+        $(function() {
+
+        });
+    </script>
+</body>
+
+</html>
